@@ -5,6 +5,10 @@ const kafka = require('./kafka/config');
 
 app.use(express.json());
 
+app.get('/', (req, res, next)=> {
+  res.send("Home Route");
+})
+
 app.post('/webhook', (req, res) => {
   res.send('webhook!')
 });
