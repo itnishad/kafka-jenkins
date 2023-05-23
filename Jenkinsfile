@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh './jenkins/scripts/deliver.sh'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
