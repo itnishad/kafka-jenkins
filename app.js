@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4002;
+const port = 9821;
 const kafka = require('./kafka/config');
 
 app.use(express.json());
@@ -9,7 +9,7 @@ app.get('/', (req, res, next)=> {
   res.send("Home Route");
 })
 
-app.post('/webhook', (req, res) => {
+app.get('/webhook', (req, res) => {
   res.send('webhook!')
 });
 
